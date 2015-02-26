@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/main_background"
-    android:orientation="vertical" >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/main_background"
+              android:orientation="vertical" >
 
     <TextView
         android:id="@+id/tv_signup"
@@ -70,21 +70,8 @@
                 android:inputType="textPassword"
                 android:password="true" />
 
-            <TextView
-                style="@style/ShadowText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingTop="10dp"
-                android:text="@string/label_forgotpassword"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/text_link"
-                android:layout_marginLeft="230dp"/>
-
             <Button
-                android:id="@+id/b_login"
+                android:id="@+id/b_signup"
                 style="@style/ShadowText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -93,7 +80,7 @@
                 android:gravity="center"
                 android:onClick="handleLogin"
                 android:padding="10dp"
-                android:text="@string/label_sign_in"
+                android:text="@string/label_sign_up"
                 android:textColor="@color/text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
