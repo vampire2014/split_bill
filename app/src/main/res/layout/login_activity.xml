@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="300dp"
     android:layout_height="match_parent"
     android:background="@drawable/main_background"
     android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/tv_signup"
-        style="@style/ShadowText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/stripe_repeat"
-        android:gravity="center"
-        android:padding="5dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/text"
-        android:textColorLink="@color/text_link" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -72,6 +60,7 @@
 
             <TextView
                 style="@style/ShadowText"
+                android:id="@+id/et_forgotpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"

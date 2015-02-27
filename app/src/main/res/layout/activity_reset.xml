@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="300dp"
+              android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@drawable/main_background"
               android:orientation="vertical" >
@@ -27,17 +27,17 @@
                 android:paddingBottom="5dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="@string/label_email_address"
+                android:text="@string/label_newpassword"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/text" />
 
-            <AutoCompleteTextView
-                android:id="@+id/et_email"
+            <EditText
+                android:id="@+id/et_newpassword"
                 style="@style/SignInEditText"
                 android:completionThreshold="1"
                 android:imeOptions="actionNext"
-                android:inputType="textEmailAddress"
-                android:nextFocusDown="@+id/et_password" />
+                android:inputType="textPassword"
+                android:nextFocusDown="@+id/et_cfpassword" />
 
             <TextView
                 style="@style/ShadowText"
@@ -47,19 +47,40 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingTop="10dp"
-                android:text="@string/label_password"
+                android:text="@string/label_cfpassword"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/text" />
 
             <EditText
-                android:id="@+id/et_password"
+                android:id="@+id/et_cfpassword"
                 style="@style/SignInEditText"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:password="true" />
 
+            <TextView
+                style="@style/ShadowText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/label_passwordcode"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/text"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:id="@+id/et_passwordcode"
+                style="@style/SignInEditText"
+                android:completionThreshold="1"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusDown="@+id/b_reset"
+                android:layout_width="187dp"/>
+
             <Button
-                android:id="@+id/b_signup"
+                android:id="@+id/b_reset"
                 style="@style/ShadowText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -68,7 +89,7 @@
                 android:gravity="center"
                 android:onClick="handleLogin"
                 android:padding="10dp"
-                android:text="@string/label_sign_up"
+                android:text="@string/label_reset"
                 android:textColor="@color/text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
