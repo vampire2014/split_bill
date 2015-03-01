@@ -26,8 +26,14 @@ public class ForgetActivity extends Activity {
         send.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                //success
+                //check email style
+                //User exists
+                //Send Code to user's email(with expire time)
+                //Input code with validation
+                //Match the code
+                //Load Reset Activity
                 //failure
+                //The user is not exist, guide him to signup view
             }
         });
     }
