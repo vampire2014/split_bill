@@ -11,7 +11,7 @@ public class Request {
 	private static final String URL_RESET_PSW = "http://splitbill-2015spring.herokuapp.com/users/reset_password";
 	
 	// login
-	public static void loginRequest(String email, String password, int login_type, Responce r){
+	public static void loginRequest(String email, String password, int login_type, CallBackResponce r){
 		JSONObject jsonRequest = new JSONObject();
 		jsonRequest.put("email", email);
 		jsonRequest.put("password", password);
@@ -24,7 +24,7 @@ public class Request {
 	}
 	
 	// sign up
-	public static void signupRequest(String email, String password, Responce r){
+	public static void signupRequest(String email, String password, CallBackResponce r){
 		JSONObject jsonRequest = new JSONObject();
 		jsonRequest.put("email", email);
 		jsonRequest.put("password", password);
@@ -36,7 +36,7 @@ public class Request {
 	}
 	
 	// forget password
-	public static void forgetPasswordRequest(String email, Responce r){
+	public static void forgetPasswordRequest(String email, CallBackResponce r){
 		JSONObject jsonRequest = new JSONObject();
 		jsonRequest.put("email", email);
 		String urlParameters = jsonRequest.toString();
@@ -47,7 +47,7 @@ public class Request {
 	}
 	
 	// reset password
-	public static void resetPasswordRequest(String email, String code, String new_password, Responce r){
+	public static void resetPasswordRequest(String email, String code, String new_password, CallBackResponce r){
 		JSONObject jsonRequest = new JSONObject();
 		jsonRequest.put("email", email);
 		jsonRequest.put("code", code);

@@ -11,9 +11,9 @@ public class ExecutePost implements Runnable{
 	
 	private String targetURL; 
 	private String urlParameters;
-	private Responce r;
+	private CallBackResponce r;
 	
-	ExecutePost(String targetURL, String urlParameters, Responce r){
+	ExecutePost(String targetURL, String urlParameters, CallBackResponce r){
 		this.targetURL = targetURL;
 		this.urlParameters = urlParameters;
 		this.r = r;
@@ -56,13 +56,13 @@ public class ExecutePost implements Runnable{
 	      }
 	      rd.close();
 //	      return response.toString();
-	      r.responce(response.toString());
+	      r.cbr(response.toString());
 
 	    } catch (Exception e) {
 
 	      e.printStackTrace();
 //	      return null;
-	      r.responce(null);
+	      r.cbr(null);
 
 	    } finally {
 
