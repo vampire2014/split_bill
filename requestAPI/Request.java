@@ -27,10 +27,14 @@ public class Request {
     private String token = "";   // token
 
     // URL
-    private static final String URL_LOGIN = "http://splitbill-2015spring.herokuapp.com/users/login";
-    private static final String URL_SIGNUP = "http://splitbill-2015spring.herokuapp.com/users/sign_up";
-    private static final String URL_FORGET_PSW = "http://splitbill-2015spring.herokuapp.com/users/forget_password";
-    private static final String URL_RESET_PSW = "http://splitbill-2015spring.herokuapp.com/users/reset_password";
+//    private static final String URL_LOGIN = "http://splitbill-2015spring.herokuapp.com/users/login";
+//    private static final String URL_SIGNUP = "http://splitbill-2015spring.herokuapp.com/users/sign_up";
+//    private static final String URL_FORGET_PSW = "http://splitbill-2015spring.herokuapp.com/users/forget_password";
+//    private static final String URL_RESET_PSW = "http://splitbill-2015spring.herokuapp.com/users/reset_password";
+    private static final String URL_LOGIN = "http://private-1875e-splitbillspring2015.apiary-mock.com/login";
+    private static final String URL_SIGNUP = "http://private-1875e-splitbillspring2015.apiary-mock.com/signup";
+    private static final String URL_FORGET_PSW = "http://private-1875e-splitbillspring2015.apiary-mock.com/forget_password";
+    private static final String URL_RESET_PSW = "http://private-1875e-splitbillspring2015.apiary-mock.com/reset_password";
     private static final String URL_DEPOSIT = "http://private-1875e-splitbillspring2015.apiary-mock.com/deposit";
     private static final String URL_TRANSFER = "http://private-1875e-splitbillspring2015.apiary-mock.com/transfer";
     private static final String URL_WITHDRAW = "http://private-1875e-splitbillspring2015.apiary-mock.com/withdraw";
@@ -348,7 +352,7 @@ public class Request {
     }
 
     // withdraw
-    public RequestResult withdrawRequest(String full_name, int amount, String bank_email, String stripe_token) throws JSONException {
+    public RequestResult withdrawRequest(String full_name, int amount, String bank_email, int bank_account) throws JSONException {
 
         // login or not
         if( id == -1 || token.equals("") ){
@@ -363,7 +367,7 @@ public class Request {
         jsonRequest.put("full_name", full_name);
         jsonRequest.put("amount", amount);
         jsonRequest.put("bank_email", bank_email);
-        jsonRequest.put("stripe_token", stripe_token);
+        jsonRequest.put("bank_account", bank_account);
         String urlParameters = jsonRequest.toString();
 
         // post request
