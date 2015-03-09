@@ -4,10 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
+import org.json.JSONException;
+//import org.json.JSONException;
 
 public class MainActivity extends Activity {
 
+    public Request request = Request.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,5 +36,20 @@ public class MainActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void commTest(View view){
+
+        try {
+            request.signupRequest("ssdddsd@126.com","123321", new CallBackResponse() {
+                @Override
+                public void cbrsp(RequestResult requestResult) {
+                    System.out.println(requestResult.isSuccess);
+                }
+            });
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 }
