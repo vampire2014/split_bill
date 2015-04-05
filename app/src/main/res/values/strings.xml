@@ -22,6 +22,39 @@
     <string name="avatar">Avatar</string>
     <string name="choose">Choose</string>
 
+    //Menu
+
+    <string name="drawer_open">Menu Opened</string>
+    <string name="drawer_close">Menu Closed</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Search People</item>
+        <item >Banks &amp; Cards</item>
+        <item >Invite Friends</item>
+        <item >Friends</item>
+        <item >Pending</item>
+        <item >Settings</item>
+        <item >Log out</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_search</item>
+        <item>@drawable/ic_cards</item>
+        <item>@drawable/ic_invites</item>
+        <item>@drawable/ic_friend</item>-->
+        <item>@drawable/ic_pending</item>
+        <item>@drawable/ic_settings</item>
+        <item>@drawable/ic_logout</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+
+
     <!-- AuthenticatorActivity -->
     <string name="label_email_address">Email Address</string>
     <string name="label_password">Password</string>
@@ -62,5 +95,32 @@
     <string name="error_field_required">Please enter your email</string>
     <string name="error_invalid_email">Your email address is invalid, please try again</string>
     <string name="invaliduser">Your username or password is invalid.Please try again.</string>
+    <string name="facebook_app_id">1588853734665743</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="action_example">Example action</string>
+    <string name="fblogin">Facebook Login</string>
+    <string name="signupmsg">Your username is invalid, please try again</string>
+    <string name="notification">notification</string>
+    <string name="transaction">transaction</string>
+    <string name="Cash_out">Cash Out</string>
+    <string name="title_activity_creditactivity">creditactivity</string>
+    <string name="cardnumber">CardNumber</string>
+
+    <string name="addPayment">Add Payment Method</string>
+    <string name="paymentMethods">Payment Methods</string>
+
+    <string name="endingIn">Card ending in </string>
+    <string name="progressMessage">Creating Token&#8230;</string>
+    <string name="validationErrors">Validation Errors</string>
+
+    <string name="cardNumber">Card Number</string>
+    <string name="save">Save</string>
+    <string name="cvc">CVC</string>
+
+    <string name="ok">OK</string>
+    <string name="label_add_credit">Credit</string>
 
 </resources>

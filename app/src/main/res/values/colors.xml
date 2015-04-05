@@ -4,6 +4,7 @@
     <color name="text_light">#999999</color>
     <color name="text_inverted">#FFFFFF</color>
     <color name="text_title">#DFDFDF</color>
+    <color name ="list_item_title">#FAFAFA</color>
     <color name="pager_footer">#1fb6ed</color>
     <color name="pager_selected_text">#FFFFFF</color>
     <color name="pager_background">#F4F4F4</color>
@@ -44,5 +45,21 @@
     <color name="color_preloader_end">#ff56a9c7</color>
 
     <color name="dark_grey">#1f1f1f</color>
+    <color name="counter_text_bg">#1f1f1f</color>
+
     <color name="navigation_drawer_item_separator">#c2c2c2</color>
+    <color name="list_divider">#c2c2c2</color>
+
+    <color name="text_color_default">#00000C</color>
+    <color name="text_color_inverse">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="list_row_default_bg">#ffffff</color>
+    <color name="list_row_pressed_bg">#008cef</color>
+    <color name="list_row_selected_bg">#86d3f6</color>
+
+    <color name="spinnerItem">#AAAAAA</color>
+    <color name="editText">#AAAAAA</color>
+    <color name="buttonText">#EEEEEE</color>
+    <color name="headerText">#EEEEEE</color>
+
 </resources>

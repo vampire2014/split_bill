@@ -1,20 +1,29 @@
 package com.eugeneashley.splitbill.authentication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.eugeneashley.splitbill.MainActivity;
 import com.eugeneashley.splitbill.R;
+import com.eugeneashley.splitbill.requestAPI.CallBackResponse;
+import com.eugeneashley.splitbill.requestAPI.Request;
+import com.eugeneashley.splitbill.requestAPI.RequestResult;
+
+import org.json.JSONException;
 
 
 public class ForgetActivity extends Activity {
 
     private String email;
     private Button send;
+    private Request forgot = Request.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +37,27 @@ public class ForgetActivity extends Activity {
             public void onClick(View view) {
                 //check email style
                 //User exists
+                //not:back to signup
+
+                try {
+                    forgot.forgetPasswordRequest(email,new CallBackResponse() {
+                        @Override
+                        public void cbrsp(RequestResult requestResult) {
+                            if(requestResult.isSuccess){
+                                Intent intent = new Intent(ForgetActivity.this,ResetActivity.class);
+                                intent.putExtra("email", email);
+                                startActivity(intent);
+                            }else{
+                                Intent intent = new Intent(ForgetActivity.this,LoginActivity.class);
+                                startActivity(intent);
+                            }
+                        }
+                    });
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
                 //Send Code to user's email(with expire time)
                 //Input code with validation
                 //Match the code
