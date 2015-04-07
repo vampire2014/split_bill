@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="b_wrapper" type="id">b_wrapper</item>
+    <item name="icon_wrapper" type="id">icon</item>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:facebook="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_centerHorizontal="true"
+              android:layout_below="@+id/icon_wrapper"
+              android:layout_alignParentBottom="@+id/b_wrapper"
+              android:orientation="vertical"
+              android:weightSum="1">
+
+    <LinearLayout
+        android:id="@id/icon_wrapper"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:layout_weight="0.53"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/ic_launcher"
+            android:layout_gravity="center_horizontal"
+            style="@style/AvatarLarge"/>
+
+        <TextView
+            style="@style/AvatarLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/label_description"
+            android:textColor="@color/table_text"
+            android:gravity="center"
+            android:id="@+id/description"
+            android:layout_gravity="center"
+            android:autoText="false"
+            android:textSize="22dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/b_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:weightSum="1"
+        android:baselineAligned="false"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/b_signup"
+                style="@style/ShadowText"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background_states"
+                android:text="@string/label_sign_up"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/b_login"
+                style="@style/ShadowText"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background_states"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/label_sign_in"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_weight="1.10"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+
+
+        <com.facebook.widget.LoginButton
+                android:id="@+id/authButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                facebook:confirm_logout="false"
+                facebook:fetch_user_info="true"
+                android:text="@string/fblogin"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
