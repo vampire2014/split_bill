@@ -6,27 +6,19 @@ android {
 
     defaultConfig {
         applicationId "com.eugeneashley.splitbill"
-        minSdkVersion 14
-        targetSdkVersion 20
+        minSdkVersion 19
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
-repositories { mavenCentral() }
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.facebook.android:facebook-android-sdk:3.21.1'
-    compile 'com.android.support:support-v4:21.0.+'
-    compile files('/Users/macbookpro/Desktop/带饭大哥/splitbill/stripev2/libs/gson-2.2.4.jar')
-    compile files('/Users/macbookpro/Desktop/带饭大哥/splitbill/stripev2/libs/stripe-java-1.15.1.jar')
-    compile files('libs/gson-2.2.4.jar')
-    compile files('libs/stripe-java-1.15.1.jar')
 }

@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/split_bill-login_ashley.iml" filepath="$PROJECT_DIR$/split_bill-login_ashley.iml" />
-      <module fileurl="file://$PROJECT_DIR$/stripe/stripe.iml" filepath="$PROJECT_DIR$/stripe/stripe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/split_bill.iml" filepath="$PROJECT_DIR$/split_bill.iml" />
     </modules>
   </component>
 </project>
